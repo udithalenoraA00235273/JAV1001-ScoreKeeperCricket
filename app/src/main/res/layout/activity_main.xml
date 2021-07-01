@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A1763"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- LinearLayout to define the section for two teams -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <!-- LinearLayout to define the Team one section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#0A1763"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+        <!-- Team one total score -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="TEAM ONE"
+                    android:textStyle="bold"
+                    android:textColor="#fffffc"
+                    android:textSize="22sp" />
+                <TextView
+                    android:id="@+id/team_one_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="000"
+                    android:textColor="#e3fb26"
+                    android:textSize="35sp" />
+
+ <!-- GridLayout to define the section for team two scoring options and to display extra runs & wickets -->
+            <GridLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:rowCount="6"
+                android:paddingLeft="12dp">
+
+            <!-- Team one wickets and extras -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Wickets"
+                    android:textStyle="bold"
+                    android:textColor="#fffffc"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/team_one_wickets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="00"
+                    android:textColor="#e3fb26"
+                    android:textSize="28sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Extras"
+                    android:textStyle="bold"
+                    android:textColor="#fffffc"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/team_one_extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="00"
+                    android:textColor="#e3fb26"
+                    android:textSize="28sp" />
+
+            <!-- buttons to add the scoring and button to mark as out when a wicket fall -->
+                <Button
+                    android:id="@+id/team_one_one_run"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/round_buttons"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="1"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/team_one_two_runs"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_buttons"
+                    android:text="2"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/team_one_three_runs"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/round_buttons"
+                    android:text="3"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/team_one_four_runs"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/round_buttons"
+                    android:text="4"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/team_one_six_runs"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/round_buttons"
+                    android:text="6"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/team_one_wicket_count"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/round_buttons"
+                    android:text="Out"
+                    android:textColor="#ff0003"
+                    android:textSize="14sp" />
+
+        <!-- Radio buttons to select the type of extra runs -->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/team_one_wide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Wide Ball"
+                android:textColor="#fffffc"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+            <RadioButton
+                android:id="@+id/team_one_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Ball"
+                android:textColor="#fffffc"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </RadioGroup>
+        </GridLayout>
+
+        <!-- GridLayout to define the section for extra runs buttons -->
+        <GridLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="6"
+            android:paddingLeft="12dp">
+        <!-- Buttons to add extra runs as per the situation -->
+            <Button
+                android:id="@+id/team_one_extras_multi"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/round_buttons"
+                android:text="+"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/team_one_extras_five"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/round_buttons"
+                android:text="5"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+        </GridLayout>
+        </LinearLayout>
+
+        <!-- LinearLayout to define the Team two section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#0A1763"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+        <!-- Team two total score -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="TEAM TWO"
+                android:textStyle="bold"
+                android:textColor="#fffffc"
+                android:textSize="22sp" />
+            <TextView
+                android:id="@+id/team_two_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="000"
+                android:textColor="#e3fb26"
+                android:textSize="35sp" />
+
+<!-- GridLayout to define the section for team two scoring options and to display extra runs & wickets -->
+        <GridLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="6"
+            android:paddingLeft="13dp">
+
+        <!-- Team two wickets and extras -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginLeft="5dp"
+                android:text="Wickets"
+                android:textStyle="bold"
+                android:textColor="#fffffc"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/team_two_wickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="00"
+                android:textColor="#e3fb26"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginLeft="5dp"
+                android:text="Extras"
+                android:textStyle="bold"
+                android:textColor="#fffffc"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/team_two_extras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="00"
+                android:textColor="#e3fb26"
+                android:textSize="28sp" />
+            <Button
+                android:background="@drawable/round_buttons"
+                android:id="@+id/team_two_one_run"
+                android:layout_width="75dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="1"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+            <!-- buttons to add the scoring and button to mark as out when a wicket fall -->
+            <Button
+                android:background="@drawable/round_buttons"
+                android:id="@+id/team_two_two_runs"
+                android:layout_width="75dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:text="2"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <Button
+                android:background="@drawable/round_buttons"
+                android:id="@+id/team_two_three_runs"
+                android:layout_width="75dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="3"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <Button
+                android:background="@drawable/round_buttons"
+                android:id="@+id/team_two_four_runs"
+                android:layout_width="75dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:text="4"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <Button
+                android:background="@drawable/round_buttons"
+                android:id="@+id/team_two_six_runs"
+                android:layout_width="75dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="6"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <Button
+                android:background="@drawable/round_buttons"
+                android:id="@+id/team_two_wicket_count"
+                android:layout_width="75dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:text="OUT"
+                android:textColor="#ff0003"
+                android:textSize="14sp"/>
+
+        <!-- Radio buttons to select the type of extra runs -->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/team_two_wide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Wide Ball"
+                android:textColor="#fffffc"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+            <RadioButton
+                android:id="@+id/team_two_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Ball"
+                android:textColor="#fffffc"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </RadioGroup>
+    </GridLayout>
+
+    <!-- GridLayout to define the section for extra runs buttons -->
+    <GridLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="6"
+        android:paddingLeft="12dp">
+
+            <!-- Buttons to add extra runs as per the situation -->
+            <Button
+                android:id="@+id/team_two_extras_multi"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/round_buttons"
+                android:text="+"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/team_two_extras_five"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/round_buttons"
+                android:text="5"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+    </GridLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+    <!-- LinearLayout to define the section for the reset scores button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:background="@drawable/round_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="RESET SCORES"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</LinearLayout>

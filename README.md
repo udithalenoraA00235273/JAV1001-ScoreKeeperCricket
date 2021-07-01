@@ -8,4 +8,5 @@ each team and reset button to reset the scores for a new match. In this app if a
 **!! Author !!**
 
 Student Name - Uditha Lenora
+
 Student Number - A00235273

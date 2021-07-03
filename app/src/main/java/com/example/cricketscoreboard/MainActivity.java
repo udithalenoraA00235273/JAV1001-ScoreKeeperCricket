@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
             button = findViewById(R.id.team_two_extras_five);
             button.setEnabled(false);
         }
-        else if (teamOneScore <= teamTwoScore) {
+        else if (teamOneScore < teamTwoScore) {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setMessage("Team Two has won the match...!!!");
             alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {

@@ -6,8 +6,14 @@ This app layout is made for keeping the socres in a cricket match. It displays t
 After the match ended user can select the reset button down below to reset the scoreboard and start a new match.
 Enjoy.....
 
+**!!!! Things to be considered !!!!**
+
+This app is tested on a pixle device using android 8.0.
+
 **!! Author !!**
 
 Student Name - Uditha Lenora
 
 Student Number - A00235273
+
+

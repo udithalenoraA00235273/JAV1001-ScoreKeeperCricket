@@ -16,6 +16,7 @@
 
     <!-- LinearLayout to define the Team one section -->
         <LinearLayout
+            android:id="@+id/team_one_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="1dp"
@@ -90,6 +91,7 @@
             <!-- buttons to add the scoring and button to mark as out when a wicket fall -->
                 <Button
                     android:id="@+id/team_one_one_run"
+                    android:onClick="teamOneOneRun"
                     android:layout_width="75dp"
                     android:layout_height="55dp"
                     android:background="@drawable/round_buttons"
@@ -101,6 +103,7 @@
                     android:textSize="14sp" />
                 <Button
                     android:id="@+id/team_one_two_runs"
+                    android:onClick="teamOneTwoRuns"
                     android:layout_width="75dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="8dp"
@@ -110,6 +113,7 @@
                     android:textSize="14sp" />
                 <Button
                     android:id="@+id/team_one_three_runs"
+                    android:onClick="teamOneThreeRuns"
                     android:layout_width="75dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="5dp"
@@ -121,6 +125,7 @@
                     android:textSize="14sp" />
                 <Button
                     android:id="@+id/team_one_four_runs"
+                    android:onClick="teamOneFourRuns"
                     android:layout_width="75dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="5dp"
@@ -130,6 +135,7 @@
                     android:textSize="14sp" />
                 <Button
                     android:id="@+id/team_one_six_runs"
+                    android:onClick="teamOneSixRuns"
                     android:layout_width="75dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="5dp"
@@ -141,6 +147,7 @@
                     android:textSize="14sp" />
                 <Button
                     android:id="@+id/team_one_wicket_count"
+                    android:onClick="teamOneWicket"
                     android:layout_width="75dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="5dp"
@@ -183,6 +190,7 @@
         <!-- Buttons to add extra runs as per the situation -->
             <Button
                 android:id="@+id/team_one_extras_multi"
+                android:onClick="teamOneExtrasMulti"
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="2dp"
@@ -193,6 +201,7 @@
                 android:textSize="14sp" />
             <Button
                 android:id="@+id/team_one_extras_five"
+                android:onClick="teamOneExtrasFive"
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="2dp"
@@ -280,6 +289,7 @@
             <Button
                 android:background="@drawable/round_buttons"
                 android:id="@+id/team_two_one_run"
+                android:onClick="teamTwoOneRun"
                 android:layout_width="75dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
@@ -293,6 +303,7 @@
             <Button
                 android:background="@drawable/round_buttons"
                 android:id="@+id/team_two_two_runs"
+                android:onClick="teamTwoTwoRuns"
                 android:layout_width="75dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
@@ -302,6 +313,7 @@
             <Button
                 android:background="@drawable/round_buttons"
                 android:id="@+id/team_two_three_runs"
+                android:onClick="teamTwoThreeRuns"
                 android:layout_width="75dp"
                 android:layout_height="55dp"
                 android:layout_marginRight="5dp"
@@ -313,6 +325,7 @@
             <Button
                 android:background="@drawable/round_buttons"
                 android:id="@+id/team_two_four_runs"
+                android:onClick="teamTwoFourRuns"
                 android:layout_width="75dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="5dp"
@@ -322,6 +335,7 @@
             <Button
                 android:background="@drawable/round_buttons"
                 android:id="@+id/team_two_six_runs"
+                android:onClick="teamTwoSixRuns"
                 android:layout_width="75dp"
                 android:layout_height="55dp"
                 android:layout_marginRight="5dp"
@@ -333,6 +347,7 @@
             <Button
                 android:background="@drawable/round_buttons"
                 android:id="@+id/team_two_wicket_count"
+                android:onClick="teamTwoWicket"
                 android:layout_width="75dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="5dp"
@@ -375,6 +390,7 @@
             <!-- Buttons to add extra runs as per the situation -->
             <Button
                 android:id="@+id/team_two_extras_multi"
+                android:onClick="teamTwoExtrasMulti"
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="2dp"
@@ -385,6 +401,7 @@
                 android:textSize="14sp" />
             <Button
                 android:id="@+id/team_two_extras_five"
+                android:onClick="teamTwoExtrasFive"
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="2dp"
@@ -407,6 +424,7 @@
 
         <Button
             android:background="@drawable/round_buttons"
+            android:onClick="resetScores"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
